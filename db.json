@@ -1,0 +1,54 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "name": "Buy food",
+      "description": "Buy bread, sausage, eggs, salad",
+      "status": "NEW",
+      "dueDate": "2020-06-18T06:59:06.951Z",
+      "created": "2020-06-18T06:59:06.951Z",
+      "assignee": 1
+    },
+    {
+      "id": 2,
+      "name": "Cleanup kitchen",
+      "description": "Cleanup fridge, table and cooker",
+      "status": "IN_PROGRESS",
+      "dueDate": "2020-06-17T06:59:06.951Z",
+      "created": "2020-06-20T06:59:06.951Z",
+      "assignee": 2
+    },
+    {
+      "id": 3,
+      "name": "Order service inspection of the car",
+      "description": "Call +420 111 777 444",
+      "status": "IN_PROGRESS",
+      "dueDate": "2020-06-18T06:59:06.951Z",
+      "created": "2020-06-18T06:59:06.951Z",
+      "assignee": 1
+    },
+    {
+      "id": 4,
+      "name": "Mow the grass",
+      "description": null,
+      "status": "DONE",
+      "dueDate": "2020-06-18T06:59:06.951Z",
+      "created": "2020-06-18T06:59:06.951Z",
+      "assignee": 1
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "firstName": "John",
+      "surname": "Doe",
+      "position": "husband"
+    },
+    {
+      "id": 2,
+      "firstName": "Jane",
+      "surname": "Doe",
+      "position": "wife"
+    }
+  ]
+}
