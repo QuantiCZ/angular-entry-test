@@ -44,6 +44,6 @@ However it is not necessary to implement all these cases. What is more important
 ### There are two large requirements:
 
 1. Write your application in Angular 12 (or higher). We have predefined the libraries we think you may want, but you are free to change them.
-2. Connect to our mock ToDo API.  The API is already implemented, you only need to boot it up locally. To do so, run `yarn api` at the root folder.
+2. Connect to our mock ToDo API.  The API is already implemented, you only need to boot it up locally. To do so, run `yarn api` at the root folder. API will be hosted at http://localhost:3000 . Documentation on API features can be found here - https://github.com/typicode/json-server#getting-started
 
 Other than that, you are not restricted in any way! You may use any libraries you like, and change or rewrite the template we have predefined for you.
