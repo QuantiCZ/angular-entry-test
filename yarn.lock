@@ -2298,10 +2298,10 @@
   dependencies:
     "@types/node" "*"
 
-"@types/jasmine@~3.6.0":
-  "integrity" "sha512-S6pvzQDvMZHrkBz2Mcn/8Du7cpr76PlRJBAoHnSDNbulULsH5dp0Gns+WRyNX5LHejz/ljxK4/vIHK/caHt6SQ=="
-  "resolved" "https://registry.npmjs.org/@types/jasmine/-/jasmine-3.6.11.tgz"
-  "version" "3.6.11"
+"@types/jasmine@^4.3.1":
+  "integrity" "sha512-Vu8l+UGcshYmV1VWwULgnV/2RDbBaO6i2Ptx7nd//oJPIZGhoI1YLST4VKagD2Pq/Bc2/7zvtvhM7F3p4SN7kQ=="
+  "resolved" "https://registry.npmjs.org/@types/jasmine/-/jasmine-4.3.1.tgz"
+  "version" "4.3.1"
 
 "@types/json-schema@*", "@types/json-schema@^7.0.8":
   "integrity" "sha512-YSBPTLTVm2e2OoQIDYx8HaeWJ5tTToLH67kXR7zYNGupXMEHa2++G8k+DczX2cFVgalypqtyZIcU19AFcmOpmg=="
