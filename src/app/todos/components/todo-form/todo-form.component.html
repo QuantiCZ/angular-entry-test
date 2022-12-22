@@ -1,0 +1,75 @@
+<div class="user-form">
+  <form [formGroup]="form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Todo name</mat-label>
+      <input matInput placeholder="e.g. Lunch" formControlName="name" />
+      <mat-error *ngIf="nameControlValid">Name required!</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Todo description</mat-label>
+      <input
+        matInput
+        placeholder="e.g. Buy food"
+        formControlName="description"
+      />
+      <mat-error *ngIf="descriptionControlValid"
+        >Description required!</mat-error
+      >
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Choose a due date</mat-label>
+      <input matInput [matDatepicker]="picker" formControlName="dueDate" />
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle
+        matIconSuffix
+        [for]="picker"
+      ></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Select status</mat-label>
+      <!-- //TODO: mozna lepsi checkbox  -->
+      <mat-select formControlName="status">
+        <mat-option *ngFor="let status of statuses" [value]="status">
+          {{ status }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Select assignee</mat-label>
+      <!-- //TODO: mozna lepsi checkbox  -->
+      <mat-select formControlName="assignee">
+        <mat-option
+          *ngFor="let assignee of assignees"
+          [value]="assignee.id"
+        >
+          {{ assignee.firstName }} {{ assignee.surname }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="createTodo(form)"
+      *ngIf="!exists"
+    >
+      Create todo
+    </button>
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="updateTodo(form)"
+      *ngIf="exists"
+    >
+      Update todo
+    </button>
+    <button mat-raised-button color="primary" (click)="deleteTodo(form)">
+      Delete todo
+    </button>
+  </form>
+</div>

@@ -19,22 +19,22 @@
       "assignee": 2
     },
     {
-      "id": 3,
-      "name": "Order service inspection of the car",
-      "description": "Call +420 111 777 444",
-      "status": "IN_PROGRESS",
+      "id": 4,
+      "name": "Mow the grass",
+      "description": "Grass needs to be cut down",
+      "status": "DONE",
       "dueDate": "2020-06-18T06:59:06.951Z",
       "created": "2020-06-18T06:59:06.951Z",
       "assignee": 1
     },
     {
-      "id": 4,
-      "name": "Mow the grass",
-      "description": null,
-      "status": "DONE",
-      "dueDate": "2020-06-18T06:59:06.951Z",
-      "created": "2020-06-18T06:59:06.951Z",
-      "assignee": 1
+      "name": "Test",
+      "description": "test",
+      "status": "NEW",
+      "created": "2022-12-21T10:03:10.038Z",
+      "dueDate": "2022-12-13T23:00:00.000Z",
+      "assignee": 3,
+      "id": 6
     }
   ],
   "users": [
@@ -42,13 +42,19 @@
       "id": 1,
       "firstName": "John",
       "surname": "Doe",
-      "position": "husband"
+      "position": "wife"
     },
     {
-      "id": 2,
-      "firstName": "Jane",
-      "surname": "Doe",
-      "position": "wife"
+      "firstName": "Baron",
+      "surname": "Harkonnen",
+      "position": "husband",
+      "id": 2
+    },
+    {
+      "firstName": "Paul",
+      "surname": "Atreides",
+      "position": "husband",
+      "id": 3
     }
   ]
 }
