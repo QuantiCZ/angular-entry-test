@@ -1,0 +1,76 @@
+<div>
+  <a
+    mat-raised-button
+    routerLink="./new"
+    routerLinkActive="router-link-active"
+    >Add user</a
+  >
+</div>
+<div>
+  <div *ngIf="!todos?.length">
+    No todos available at the moment, but don't worry you can create a new
+    one!
+  </div>
+
+  <table mat-table [dataSource]="todos" class="mat-elevation-z8">
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="position">
+      <mat-header-cell mat-header-cell *matHeaderCellDef
+        >Todo ID</mat-header-cell
+      >
+      <mat-cell mat-cell *matCellDef="let element">{{
+        element.id
+      }}</mat-cell>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <mat-header-cell mat-header-cell *matHeaderCellDef
+        >Name</mat-header-cell
+      >
+      <mat-cell mat-cell *matCellDef="let element">{{
+        element.name
+      }}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="description">
+      <mat-header-cell mat-header-cell *matHeaderCellDef
+        >Description</mat-header-cell
+      >
+      <mat-cell mat-cell *matCellDef="let element">
+        {{ element.description }}
+      </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="created">
+      <mat-header-cell mat-header-cell *matHeaderCellDef
+        >Created</mat-header-cell
+      >
+      <mat-cell mat-cell *matCellDef="let element">
+        {{ element.created | date }}
+      </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="dueDate">
+      <mat-header-cell mat-header-cell *matHeaderCellDef
+        >Due date</mat-header-cell
+      >
+      <mat-cell mat-cell *matCellDef="let element">
+        {{ element.dueDate | date }}
+      </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="assignee">
+      <mat-header-cell *matHeaderCellDef>Assignee</mat-header-cell>
+      <mat-cell *matCellDef="let element">{{ element.assignee }}</mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row
+      matRipple
+      [routerLink]="['/todos', row.id]"
+      *matRowDef="let row; columns: displayedColumns"
+    ></mat-row>
+  </table>
+</div>

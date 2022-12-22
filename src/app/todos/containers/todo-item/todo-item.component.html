@@ -1,0 +1,7 @@
+<app-todo-form
+  [todo]="todo$ | async"
+  [assignees]="assignees$ | async"
+  (create)="onCreate($event)"
+  (remove)="onDelete($event)"
+  (update)="onUpdate($event)"
+></app-todo-form>

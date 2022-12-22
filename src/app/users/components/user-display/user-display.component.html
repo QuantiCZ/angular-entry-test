@@ -1,0 +1,63 @@
+<div>
+  <a
+    mat-raised-button
+    routerLink="./new"
+    routerLinkActive="router-link-active"
+    >Add todo</a
+  >
+</div>
+<div>
+  <div *ngIf="!users?.length">
+    No users available at the moment, but don't worry you can create a new
+    one!
+  </div>
+
+  <table mat-table [dataSource]="users" class="mat-elevation-z8">
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="id">
+      <mat-header-cell mat-header-cell *matHeaderCellDef
+        >User ID</mat-header-cell
+      >
+      <mat-cell mat-cell *matCellDef="let element">{{
+        element.id
+      }}</mat-cell>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="firstName">
+      <mat-header-cell mat-header-cell *matHeaderCellDef
+        >First Name</mat-header-cell
+      >
+      <mat-cell mat-cell *matCellDef="let element">{{
+        element.firstName
+      }}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="surname">
+      <mat-header-cell mat-header-cell *matHeaderCellDef
+        >Surname</mat-header-cell
+      >
+      <mat-cell mat-cell *matCellDef="let element">
+        {{ element.surname }}
+      </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="position">
+      <mat-header-cell mat-header-cell *matHeaderCellDef
+        >Position</mat-header-cell
+      >
+      <mat-cell mat-cell *matCellDef="let element">
+        {{ element.position }}
+      </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row
+      matRipple
+      [routerLink]="['/users', row.id]"
+      *matRowDef="let row; columns: displayedColumns"
+    ></mat-row>
+  </table>
+</div>

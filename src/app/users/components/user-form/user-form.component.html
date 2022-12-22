@@ -1,0 +1,55 @@
+<div class="user-form">
+  <form [formGroup]="form">
+    <mat-form-field class="example-full-width">
+      <mat-label>User first name</mat-label>
+      <input
+        matInput
+        placeholder="e.g. Paul"
+        formControlName="firstName"
+      />
+      <mat-error *ngIf="firstNameControlValid"
+        >First name required!</mat-error
+      >
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>User surname</mat-label>
+      <input
+        matInput
+        placeholder="e.g. Atreides"
+        formControlName="surname"
+      />
+      <mat-error *ngIf="surNameControlValid">Surname required!</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Select position</mat-label>
+      <!-- //TODO: mozna lepsi checkbox  -->
+      <mat-select formControlName="position">
+        <mat-option *ngFor="let position of positions" [value]="position">
+          {{ position }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="createUser(form)"
+      *ngIf="!exists"
+    >
+      Create user
+    </button>
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="updateUser(form)"
+      *ngIf="exists"
+    >
+      Update user
+    </button>
+    <button mat-raised-button color="primary" (click)="deleteUser(form)">
+      Delete user
+    </button>
+  </form>
+</div>
